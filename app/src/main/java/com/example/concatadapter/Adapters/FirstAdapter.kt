@@ -24,7 +24,6 @@ class FirstAdapter(private var itemList: MutableList<String> = mutableListOf()) 
 
     fun addItem(item: String) {
         this.itemList.add(item)
-
         notifyItemInserted(itemList.size - 1)
     }
 

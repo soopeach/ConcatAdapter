@@ -35,16 +35,17 @@ class MainActivity : AppCompatActivity() {
 
         // 추가 버튼이 눌렸을 때 판정들
         with(binding) {
+            // 첫번째에 추가
             btnAddFirst.setOnClickListener {
                 firstItemList.add("${firstItemList.size + 1}번째 아이템")
                 firstAdp.notifyItemInserted(firstItemList.size - 1)
             }
-
+            // 두번째에 추가
             btnAddSecond.setOnClickListener {
                 secondItemList.add("${secondItemList.size + 1}번째 아이템")
                 secondAdp.notifyItemInserted(secondItemList.size - 1)
             }
-
+            // 세번째에 추가
             btnAddThird.setOnClickListener {
                 thirdItemList.add("${thirdItemList.size + 1}번째 아이템")
                 thirdAdp.notifyItemInserted(thirdItemList.size - 1)
