@@ -5,7 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.concatadapter.databinding.ThirdItemsBinding
 
-class ThirdAdapter(private var itemList : MutableList<String> = mutableListOf()): RecyclerView.Adapter<ThirdHolder>() {
+class ThirdAdapter(private var itemList: MutableList<String> = mutableListOf()) :
+    RecyclerView.Adapter<ThirdHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ThirdHolder {
         val binding =
             ThirdItemsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -26,9 +27,9 @@ class ThirdAdapter(private var itemList : MutableList<String> = mutableListOf())
     }
 }
 
-class ThirdHolder(val binding: ThirdItemsBinding) : RecyclerView.ViewHolder(binding.root){
+class ThirdHolder(val binding: ThirdItemsBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    fun setItem(item: String){
+    fun setItem(item: String) {
         binding.item.text = item
     }
 }

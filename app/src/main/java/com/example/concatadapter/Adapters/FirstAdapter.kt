@@ -5,7 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.concatadapter.databinding.FirstItemsBinding
 
-class FirstAdapter(private var itemList: MutableList<String> = mutableListOf()):RecyclerView.Adapter<FirstHolder>(){
+class FirstAdapter(private var itemList: MutableList<String> = mutableListOf()) :
+    RecyclerView.Adapter<FirstHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FirstHolder {
@@ -21,19 +22,17 @@ class FirstAdapter(private var itemList: MutableList<String> = mutableListOf()):
         return itemList.size
     }
 
-    fun addItem(item : String){
+    fun addItem(item: String) {
         this.itemList.add(item)
 
-        notifyItemInserted(itemList.size-1)
+        notifyItemInserted(itemList.size - 1)
     }
-
-
 
 }
 
-class FirstHolder(val binding: FirstItemsBinding) : RecyclerView.ViewHolder(binding.root){
+class FirstHolder(val binding: FirstItemsBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    fun setItem(item : String){
+    fun setItem(item: String) {
         binding.item.text = item
     }
 

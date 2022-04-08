@@ -34,25 +34,25 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
         // 추가 버튼이 눌렸을 때 판정들
-        with(binding){
+        with(binding) {
             btnAddFirst.setOnClickListener {
                 firstItemList.add("${firstItemList.size + 1}번째 아이템")
-                firstAdp.notifyItemInserted(firstItemList.size-1)
+                firstAdp.notifyItemInserted(firstItemList.size - 1)
             }
 
             btnAddSecond.setOnClickListener {
                 secondItemList.add("${secondItemList.size + 1}번째 아이템")
-                secondAdp.notifyItemInserted(secondItemList.size-1)
+                secondAdp.notifyItemInserted(secondItemList.size - 1)
             }
 
             btnAddThird.setOnClickListener {
                 thirdItemList.add("${thirdItemList.size + 1}번째 아이템")
-                thirdAdp.notifyItemInserted(thirdItemList.size-1)
+                thirdAdp.notifyItemInserted(thirdItemList.size - 1)
             }
         }
     }
 
-    fun getFiveItems(itemList : MutableList<String>) {
+    fun getFiveItems(itemList: MutableList<String>) {
 
         for (no in 1..5) {
             itemList.add("${no}번째 아이템")
